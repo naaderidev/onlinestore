@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+@layer components {
+  .sidebar-link {
+    @apply flex items-center justify-between mb-2 text-base text-sky-900 tracking-tighter transition-all cursor-pointer;
+  }
+  .sidebar-link.active,
+  .sidebar-link:hover {
+    @apply bg-tint/15 rounded-md shadow-sm;
+  }
+  .footer-navlink {
+    @apply flex flex-col items-center justify-center p-1;
+  }
+  .footer-navlink.isActive,
+  .footer-navlink:hover {
+    @apply border-y-2;
+  }
+  .title {
+    @apply text-lg lg:text-2xl text-sky-900 tracking-tighter font-bold;
+  }
+  .subtitle {
+    @apply text-sm lg:text-base text-sky-900 tracking-tight font-medium;
+  }
+  .subtitle-sm {
+    @apply text-sm text-sky-900 tracking-tight font-light;
+  }
+  .more-info {
+    @apply text-base text-sky-900 tracking-tighter transition-all cursor-pointer px-4 py-1;
+  }
+  .more-info.active,
+  .more-info:hover {
+    @apply bg-tint/15 rounded shadow-sm;
+  }
+  .more-info-text {
+    @apply subtitle-sm leading-relaxed text-justify normal-case indent-2;
+  }
+  .placeholder-font {
+    @apply text-sm tracking-tight font-light;
+  }
+  .thumbnail-img {
+    @apply w-12 h-12;
+  }
+  .regular-img {
+    @apply w-24 h-24 rounded;
+  }
+  .card-img {
+    @apply w-96 h-64;
+  }
+  .primary-card-img {
+    @apply w-60 h-64;
+  }
+  .secondary-card-img {
+    @apply w-36 h-36;
+  }
+  .icon {
+    @apply text-2xl cursor-pointer text-sky-900;
+  }
+  .icon.active {
+    @apply text-rose-800;
+  }
+  .small-icon {
+    @apply text-base cursor-pointer text-sky-900;
+  }
+  .baner {
+    @apply bg-center bg-cover bg-no-repeat w-full h-[40vw];
+  }
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+  .flex-container {
+    @apply flex items-center justify-center gap-x-10 gap-y-4 flex-wrap;
+  }
+  .text-area {
+    @apply border border-spacing-2 outline-none p-2 rounded;
+  }
+  .cms-btn {
+    @apply w-28 p-1.5 border-none outline-none rounded bg-tint/50 subtitle cursor-pointer transition-all;
+  }
+  .cms-btn:hover {
+    @apply bg-teal text-white;
+  }
+
+  .cms-table {
+    @apply w-fit mt-4;
+  }
+  .cms-table thead {
+    @apply bg-tint/15;
+  }
+  .cms-table th {
+    @apply p-2 text-sm text-teal;
+  }
+  .cms-table tr {
+    @apply border-b-2 border-tint/25;
+  }
+  .cms-table td {
+    @apply subtitle-sm p-2 text-center;
+  }
+  .cms-table button {
+    @apply w-fit p-1.5 border-none outline-none rounded bg-tint/15 cursor-pointer transition-all shadow-md;
+  }
+  .form-row {
+    @apply flex flex-col items-start mb-3 sm:flex-row sm:items-center sm:justify-between;
+  }
+  .form-col-50,
+  .custom-row {
+    @apply flex flex-col items-start w-full mr-4;
+  }
+  .form-col-50 input,
+  .form-col-50 textarea,
+  .custom-row input,
+  .custom-row textarea,
+  .form-col-50 select {
+    @apply w-full py-1.5 px-2 outline-none border border-teal rounded-md bg-white accent-teal font-light text-sm;
+  }
+  .form-col-50 label,
+  .custom-row label,
+  .form-col-50 legend {
+    @apply text-teal font-semibold text-sm mb-1;
+  }
+
+  .sidebar-link {
+    @apply flex items-center justify-between mb-2 text-base text-sky-900 tracking-tighter transition-all cursor-pointer px-4 py-1;
+  }
+  .sidebar-link.active,
+  .sidebar-link:hover {
+    @apply bg-tint/15 rounded shadow-sm;
+  }
+  .modal {
+    @apply fixed inset-0 z-10 bg-gray-800/70 w-full h-full flex-center opacity-0 invisible transition-all;
+  }
+  .modal.active {
+    @apply visible opacity-100;
+  }
+  .modal-wrapper {
+    @apply p-10 bg-white rounded relative;
+  }
+  .modal-wrapper h1 {
+    @apply text-xl text-teal;
+  }
+  .modal-wrapper p {
+    @apply text-base text-teal;
+  }
+  .modal-btns {
+    @apply flex-center gap-3 mt-5;
+  }
+  .modal-btn {
+    @apply border-none outline-none py-1 px-3 rounded text-white text-base w-fit;
+  }
+  .accept-btn {
+    @apply bg-teal;
+  }
+  .reject-btn {
+    @apply bg-red;
+  }
+
+  .btn-gradient {
+    @apply cursor-pointer text-sm transition-colors hover:bg-gradient-to-r from-tint to-teal border border-teal hover:text-white rounded px-2 py-1;
+  }
+  .btn-gradient-left {
+    @apply cursor-pointer text-sm transition-colors hover:bg-gradient-to-l from-tint to-teal border border-teal hover:text-white rounded px-2 py-1;
+  }
+  .btn-tint {
+    @apply cursor-pointer text-sm transition-colors hover:bg-tint border border-tint hover:text-white rounded px-2 py-1;
+  }
+  .btn-teal {
+    @apply cursor-pointer text-sm transition-colors hover:bg-teal border border-teal hover:text-white rounded px-2 py-1;
+  }
+
+  .badge {
+    @apply text-white text-sm px-3 py-1 rounded-md;
+  }
+
+  .user-panel-card {
+    @apply flex items-center justify-between mb-2 border border-tint hover:bg-slate-200 transition-all cursor-pointer px-2 py-3 rounded-md;
+  }
+
+  .rate {
+    display: flex;
+    gap: 2px;
+    padding-top: 0.2rem;
+    direction: rtl;
+    font-size: 1.1rem;
+    color: gray;
+  }
+  .rate svg:hover,
+  .rate svg:hover ~ svg {
+    color: orange; /* رنگ هنگام هاور */
+  }
+}
