@@ -1,4 +1,4 @@
-# OnlineStore :high_heel: :bag:
+# OnlineStore :high_heel:
 
 An e-commerce platform built with NextJS 14 and the app-router.
 
