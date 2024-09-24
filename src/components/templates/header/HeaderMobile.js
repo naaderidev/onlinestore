@@ -34,6 +34,13 @@ export default function HeaderMobile({ visible, setVisible, isLogin }) {
                 <HiMiniEnvelope />
                 <span>Contact Us</span>
               </Link>
+              <div className="flex items-center gap-2">
+                <span className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-tint opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-teal"></span>
+                </span>
+                <Link href="/about-site">About Site</Link>
+              </div>
               <button
                 onClick={() => logoutHandler()}
                 className="flex items-center gap-x-2 text-md"

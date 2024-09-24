@@ -15,6 +15,21 @@ body {
   height: 100%;
 }
 
+@layer base {
+  @font-face {
+    font-family: "Lalezar";
+    src: url("/fonts/Lalezar/Lalezar-Regular.ttf");
+  }
+  @font-face {
+    font-family: "Vazir Regular";
+    src: url("/fonts/Vazir/Vazirmatn-Regular.ttf");
+  }
+  @font-face {
+    font-family: "Vazir Medium";
+    src: url("/fonts/Vazir/Vazirmatn-Medium.ttf");
+  }
+}
+
 @layer components {
   .sidebar-link {
     @apply flex items-center justify-between mb-2 text-base text-sky-900 tracking-tighter transition-all cursor-pointer;

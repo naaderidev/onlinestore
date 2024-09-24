@@ -18,13 +18,13 @@ export default function Header({ isLogin }) {
           <div className="flex items-center gap-x-4 subtitle">
             <Link href="/market">Market</Link>
             <Link href="/contact">Contact Us</Link>
-            {/* <div className="flex-center gap-2">
-              <span class="relative flex h-3 w-3">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tint opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-3 w-3 bg-teal"></span>
+            <div className="flex-center gap-2">
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-tint opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-teal"></span>
               </span>
               <Link href="/about-site">About Site</Link>
-            </div> */}
+            </div>
           </div>
         </div>
         <div className="flex items-center gap-x-4">

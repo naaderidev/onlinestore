@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        Lalezar: "Lalezar",
+        VazirRegular: "Vazir Regular",
+        VazirMedium: "Vazir Medium",
+      },
       container: {
         center: true,
         padding: {
@@ -60,5 +65,10 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant("child", "&>*");
+      addVariant("child-hover", "&>*:hover");
+    },
+  ],
 };
